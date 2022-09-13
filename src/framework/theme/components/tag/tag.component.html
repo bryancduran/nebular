@@ -1,8 +1,18 @@
+<nb-icon
+  *ngIf="icon !== undefined"
+  class="nb-tag-icon size-{{ size }}"
+  icon="{{ icon }}"
+  pack="{{ iconPack }}"
+  aria-hidden="true"
+>
+</nb-icon>
 {{ text }}
-<nb-icon *ngIf="removable"
-         (click)="_remove()"
-         class="nb-tag-remove size-{{size}}"
-         icon="close-outline"
-         pack="nebular-essentials"
-         aria-hidden="true">
+<nb-icon
+  *ngIf="removable"
+  (click)="_remove()"
+  class="nb-tag-remove size-{{ size }}"
+  icon="close-outline"
+  pack="nebular-essentials"
+  aria-hidden="true"
+>
 </nb-icon>

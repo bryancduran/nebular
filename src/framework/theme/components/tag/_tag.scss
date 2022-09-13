@@ -39,6 +39,21 @@
     @include tag-outline.nb-tag-outline();
   }
 
+  .nb-tag-icon {
+    @each $size in nb-get-sizes() {
+      &.size-#{$size} {
+        font-size: nb-theme(tag-#{$size}-text-line-height);
+
+        @include nb-ltr() {
+          margin-right: nb-theme(tag-#{$size}-close-offset);
+        }
+        @include nb-rtl() {
+          margin-left: nb-theme(tag-#{$size}-close-offset);
+        }
+      }
+    }
+  }
+
   .nb-tag-remove {
     cursor: pointer;
 
