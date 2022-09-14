@@ -33,6 +33,10 @@ import { ComponentLinkDirective } from './components-link.directive';
           path: '',
           loadChildren: () => import('../playground/playground.module').then((m) => m.PlaygroundModule),
         },
+        {
+          path: 'bryan',
+          loadChildren: () => import('../bryanprojects/bryanprojects.module').then((m) => m.BryanprojectsModule),
+        },
       ],
       { useHash: true, relativeLinkResolution: 'legacy' },
     ),
