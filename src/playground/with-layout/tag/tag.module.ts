@@ -23,7 +23,6 @@ import { TagInputComponent } from './tag-input.component';
 import { TagInputWithAutocompleteComponent } from './tag-input-with-autocomplete.component';
 import { TagStatusComponent } from './tag-status.component';
 import { TagRemovableComponent } from './tag-removable.component';
-import { csharp } from 'ngx-simple-icons';
 
 @NgModule({
   imports: [
@@ -45,8 +44,4 @@ import { csharp } from 'ngx-simple-icons';
     TagRemovableComponent,
   ],
 })
-export class TagModule {
-  constructor(iconsLibrary: NbIconLibraries) {
-    iconsLibrary.registerSvgPack('simpleIcons', { csharp: csharp });
-  }
-}
+export class TagModule {}
