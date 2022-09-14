@@ -83,11 +83,29 @@ import { NbSelectComponent } from '../select/select.component';
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <nb-checkbox *ngIf="withCheckbox" [checked]="selected" [disabled]="disabled" aria-hidden="true"> </nb-checkbox>
+    <nb-icon
+      *ngIf="icon !== undefined"
+      class="nb-option-icon"
+      icon="{{ icon }}"
+      pack="{{ iconPack }}"
+      aria-hidden="true"
+    >
+    </nb-icon>
     <ng-content></ng-content>
   `,
 })
 export class NbOptionComponent<T = any> implements OnDestroy, AfterViewInit, NbFocusableOption, NbHighlightableOption {
   protected disabledByGroup = false;
+
+  /**
+   * Icon name
+   */
+  @Input() icon: string = null;
+
+  /**
+   * Icon pack name
+   */
+  @Input() iconPack: string = null;
 
   /**
    * Option value that will be fired on selection.

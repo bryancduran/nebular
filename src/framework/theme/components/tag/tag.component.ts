@@ -241,14 +241,14 @@ export class NbTagComponent implements AfterViewInit, OnDestroy, NbHighlightable
   }
 
   /**
-   * Tag text.
+   * Icon name
    */
-  @Input() icon: string = undefined;
+  @Input() icon: string = null;
 
   /**
-   * Tag text.
+   * Icon pack name
    */
-  @Input() iconPack: string = undefined;
+  @Input() iconPack: string = null;
 
   /**
    * Tag text.

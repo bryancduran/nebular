@@ -10,7 +10,9 @@
     </nb-form-field>
 
     <nb-autocomplete #autocomplete (selectedChange)="onTagAdd($event)">
-      <nb-option *ngFor="let option of options" [value]="option">{{ option }}</nb-option>
+      <nb-option *ngFor="let option of options" [value]="option" icon="csharp" iconPack="simpleIcons"
+        >{{ option }}
+      </nb-option>
     </nb-autocomplete>
   </nb-card-body>
 </nb-card>

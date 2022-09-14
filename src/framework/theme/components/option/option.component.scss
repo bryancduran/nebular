@@ -26,6 +26,15 @@
       padding: 0;
     }
   }
+
+  nb-icon {
+    display: flex;
+    pointer-events: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    @include nb-ltr(margin-right, 0.5rem);
+    @include nb-rtl(margin-left, 0.5rem);
+  }
 }
 
 :host([disabled]) {
