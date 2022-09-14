@@ -5,7 +5,7 @@
  */
 
 import { NgModule } from '@angular/core';
-import { RouterModule, Route} from '@angular/router';
+import { RouterModule, Route } from '@angular/router';
 import { TreeGridShowcaseComponent } from './tree-grid-showcase.component';
 import { TreeGridSortableComponent } from './tree-grid-sortable.component';
 import { TreeGridFilterableComponent } from './tree-grid-filterable.component';
@@ -16,10 +16,6 @@ import { TreeGridDisableClickToggleComponent } from './tree-grid-disable-click-t
 import { TreeGridCustomNodeStructureComponent } from './tree-grid-custom-node-structure.component';
 
 const routes: Route[] = [
-  {
-    path: 'tree-grid-showcase.component',
-    component: TreeGridShowcaseComponent,
-  },
   {
     path: 'tree-grid-sortable.component',
     component: TreeGridSortableComponent,
@@ -48,10 +44,14 @@ const routes: Route[] = [
     path: 'tree-grid-custom-node-structure.component',
     component: TreeGridCustomNodeStructureComponent,
   },
+  {
+    path: 'tree-grid-showcase.component',
+    component: TreeGridShowcaseComponent,
+  },
 ];
 
 @NgModule({
-  imports: [ RouterModule.forChild(routes) ],
-  exports: [ RouterModule ],
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
 export class TreeGridRoutingModule {}

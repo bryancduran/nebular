@@ -3,14 +3,22 @@
     <nb-form-field>
       <nb-tag-list (tagRemove)="onTagRemove($event)">
         <nb-tag *ngFor="let tag of tags" [text]="tag" removable icon="csharp" iconPack="simpleIcons"></nb-tag>
-        <input type="text" nbTagInput (tagAdd)="onTagAdd($event.value)" [nbAutocomplete]="autocomplete" fullWidth />
+        <input
+          type="text"
+          nbTagInput
+          (tagAdd)="onTagAdd($event.value)"
+          [nbAutocomplete]="autocomplete"
+          fullWidth
+          (input)="onChange()"
+          [status]="status"
+        />
       </nb-tag-list>
 
       <nb-icon nbSuffix icon="search" pack="eva"></nb-icon>
     </nb-form-field>
 
     <nb-autocomplete #autocomplete (selectedChange)="onTagAdd($event)">
-      <nb-option *ngFor="let option of options" [value]="option" icon="csharp" iconPack="simpleIcons"
+      <nb-option *ngFor="let option of filteredOptions$ | async" [value]="option" icon="csharp" iconPack="simpleIcons"
         >{{ option }}
       </nb-option>
     </nb-autocomplete>

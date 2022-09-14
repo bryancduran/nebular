@@ -1553,12 +1553,6 @@ export const PLAYGROUND_COMPONENTS: ComponentLink[] = [
     path: 'tree-grid',
     children: [
       {
-        path: 'tree-grid-showcase.component',
-        link: '/tree-grid/tree-grid-showcase.component',
-        component: 'TreeGridShowcaseComponent',
-        name: 'Tree Grid Showcase',
-      },
-      {
         path: 'tree-grid-sortable.component',
         link: '/tree-grid/tree-grid-sortable.component',
         component: 'TreeGridSortableComponent',
@@ -1599,6 +1593,12 @@ export const PLAYGROUND_COMPONENTS: ComponentLink[] = [
         link: '/tree-grid/tree-grid-custom-node-structure.component',
         component: 'TreeGridCustomNodeStructureComponent',
         name: 'Tree Grid Custom Node Structure',
+      },
+      {
+        path: 'tree-grid-showcase.component',
+        link: '/tree-grid/tree-grid-showcase.component',
+        component: 'TreeGridShowcaseComponent',
+        name: 'Tree Grid Showcase',
       },
     ],
   },
@@ -3672,12 +3672,6 @@ export const PLAYGROUND_COMPONENTS: ComponentLink[] = [
     path: 'tree-grid',
     children: [
       {
-        path: 'tree-grid-showcase.component',
-        link: '/tree-grid/tree-grid-showcase.component',
-        component: 'TreeGridShowcaseComponent',
-        name: 'Tree Grid Showcase',
-      },
-      {
         path: 'tree-grid-sortable.component',
         link: '/tree-grid/tree-grid-sortable.component',
         component: 'TreeGridSortableComponent',
@@ -3718,6 +3712,12 @@ export const PLAYGROUND_COMPONENTS: ComponentLink[] = [
         link: '/tree-grid/tree-grid-custom-node-structure.component',
         component: 'TreeGridCustomNodeStructureComponent',
         name: 'Tree Grid Custom Node Structure',
+      },
+      {
+        path: 'tree-grid-showcase.component',
+        link: '/tree-grid/tree-grid-showcase.component',
+        component: 'TreeGridShowcaseComponent',
+        name: 'Tree Grid Showcase',
       },
     ],
   },
